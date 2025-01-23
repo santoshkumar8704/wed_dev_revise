@@ -39,4 +39,12 @@ if (typeof nu == 'number'){
 }
 console.log(nu)
 // ? and bang(!)
-const arr : number[] = 1
+const ar = [{name:"ramya"},{name:"santosh"}]
+// let ele = ar.pop().name
+let ele = ar.pop()?.name
+console.log(ar)
+console.log(ele)
+const emptyarr :any = []
+let element = emptyarr.pop()?.name
+// let element2 = emptyarr.pop()!.name this bang gives error
+console.log(element) // undefined
