@@ -25,3 +25,25 @@ function callName ( func : (f:string,l:string,m?:string) => string,param1:string
 }
 callName(nameMerging,"TEJA","SRI","RAMYA")
 callName(nameMerging,"TEJA","RAMYA")
+
+// restoperator
+function calval(...values: number[]):number{
+    return 2
+
+}
+calval(1)
+calval(1,2)
+calval(1,2,3)
+
+// overloading
+function getItemLength(name:string):number;
+function getItemLength(names:string[]):number;
+function getItemLength(nameornames:unknown):number{
+    if (typeof nameornames == "string"){
+        return nameornames.length
+    }
+    else if (Array.isArray(nameornames)){
+        return nameornames.length
+    }
+    return 0
+}
