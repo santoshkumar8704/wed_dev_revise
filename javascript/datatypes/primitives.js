@@ -18,6 +18,6 @@ const x = 1
 x = "sky"
 x = true
 
-
+//coercion
 const s = "ramya" + "sri" + 11 + 23
 console.log(s)
