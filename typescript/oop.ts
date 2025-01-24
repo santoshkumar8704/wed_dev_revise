@@ -27,3 +27,26 @@ person1.getage()
 const human1 = new Human("santosh")
 human1.callMe()
 
+//abstract classes
+abstract class Animal{
+    abstract makeSound(duration:number):void 
+    move(duration:number){
+        console.log("MOving along....")
+        this.makeSound(duration)
+    }
+}
+class Dog extends Animal {
+    makeSound(duration: number): void {
+        const str = "BOW! BOW!...."
+        console.log(str.repeat(duration))
+    }
+}
+class Cat extends Animal {
+    makeSound(duration: number): void {
+        const str = "Meow.... Meow... "
+        console.log(str.repeat(duration))
+    }
+}
+//const newAnimal = new Animal()
+const Simba = new Dog()
+Simba.move(4)
