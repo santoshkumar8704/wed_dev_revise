@@ -29,7 +29,12 @@ human1.callMe()
 
 //abstract classes
 abstract class Animal{
+    static instanceCount = 0
     abstract makeSound(duration:number):void 
+    constructor () {
+        Animal.instanceCount++; 
+
+    }
     move(duration:number){
         console.log("MOving along....")
         this.makeSound(duration)
@@ -50,3 +55,6 @@ class Cat extends Animal {
 //const newAnimal = new Animal()
 const Simba = new Dog()
 Simba.move(4)
+console.log(Animal.instanceCount)
+const Buddy = new Dog()
+console.log(Animal.instanceCount)
