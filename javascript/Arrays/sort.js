@@ -20,3 +20,6 @@ function sortDesc(arr){
 
 console.log(sortAsc(arr1))
 console.log(sortDesc(arr1))
+const names = ['ramya','santosh','durgamma','ramuu']
+console.log(names.sort())
+console.log(names.sort().reverse())
