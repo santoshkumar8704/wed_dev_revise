@@ -10,12 +10,26 @@ const list = [
   { name: "eggs", price: 6, need: true },
   { name: "cheese", price: 20, need: false },
 ];
-for (let i = 0; i < list.length; i++) {
-  item = list[i];
-  if (item.need) {
-    html += `<li>${item.name}</li>`;
-    itemPrice += item.price;
-  }
+// for (let i = 0; i < list.length; i++) {
+//   item = list[i];
+//   if (item.need) {
+//     html += `<li>${item.name}</li>`;
+//     itemPrice += item.price;
+//   }
+// }
+// list.forEach(({name,price,need}) => {
+//   if (need) {
+//     html += `<li>${name}</li>`;
+//     itemPrice += price;
+//   }
+// });
+
+for(let {name,price,need} of list){
+    if (need) {
+        html += `<li>${name}</li>`;
+        itemPrice += price;
+      }
+
 }
 cart.innerHTML = html;
 cost.innerHTML = itemPrice;
